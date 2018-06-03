@@ -1,0 +1,25 @@
+module ietf-dpdk {
+    yang-version 1;
+    namespace "urn:opendaylight:params:xml:ns:yang:hello";
+    prefix "hello";
+
+    revision "2015-02-24" {
+	description "Basic Hello World YANG model.";
+    }
+    container ietf-dpdk {
+	leaf interface {
+	    type string;
+	    description
+		"The name of the interface.
+
+		A server implementation MAY map this leaf to the ifName
+		MIB object.  Such an implementation needs to use some
+		mechanism to handle the differences in size and characters
+		allowed between this leaf and ifName.  The definition of
+		such a mechanism is outside the scope of this document.";
+	    reference
+		"RFC 2863: The Interfaces Group MIB - ifName";
+	}
+    }
+
+}

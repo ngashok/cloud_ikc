@@ -1,0 +1,1 @@
+cmd_/home/ngashok/Projects/ikc_cloud/DPDK/dpdk-stable-17.11.2/build/build/lib/librte_eal/linuxapp/igb_uio/built-in.o :=  rm -f /home/ngashok/Projects/ikc_cloud/DPDK/dpdk-stable-17.11.2/build/build/lib/librte_eal/linuxapp/igb_uio/built-in.o; ar rcsD /home/ngashok/Projects/ikc_cloud/DPDK/dpdk-stable-17.11.2/build/build/lib/librte_eal/linuxapp/igb_uio/built-in.o
