@@ -1,0 +1,5 @@
+
+syntax = "proto3"
+message ietf-dpdk {
+string interface = 1;
+}
