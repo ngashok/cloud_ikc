@@ -1,5 +1,0 @@
-
-syntax = "proto3";
-message FirstProtoBuf {
-string interface = 1;
-}

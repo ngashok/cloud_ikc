@@ -1,3 +1,5 @@
-message ietf-dpdk {
-optional interface string
+
+syntax = "proto3";
+message FirstProtoBuf {
+string dpdk = 1;
 }

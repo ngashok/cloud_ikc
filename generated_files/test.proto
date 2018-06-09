@@ -1,0 +1,20 @@
+syntax = "proto3";
+package ietf_dpdk;
+
+message leaf_testing {
+    string leaf_testing = 1 ;
+}
+
+message system {
+    string host_name = 1 ;
+    repeated string domain_search = 2 ;
+    message login {
+        string message = 1 ;
+        message user {
+            string name = 1 ;
+            string full_name = 2 ;
+            string class = 3 ;
+        }
+    }
+}
+
