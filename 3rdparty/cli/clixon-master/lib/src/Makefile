@@ -45,7 +45,7 @@ sysconfdir	= ${prefix}/etc
 HOST_VENDOR     = unknown
 
 SH_SUFFIX	= .so
-CLIXON_VERSION  = "3.6.0"
+CLIXON_VERSION  = "3.6.1"
 CLIXON_MAJOR    = 3
 CLIXON_MINOR    = 6
 

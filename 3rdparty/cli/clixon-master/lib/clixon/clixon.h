@@ -52,10 +52,10 @@
  * CLIXON version macros
  */
 
-#define CLIXON_VERSION_STRING "3.6.0"
+#define CLIXON_VERSION_STRING "3.6.1"
 #define CLIXON_VERSION_MAJOR 3
 #define CLIXON_VERSION_MINOR 6
-#define CLIXON_VERSION_PATCH 0
+#define CLIXON_VERSION_PATCH 1
 
 /*
  * Use this constant to disable some prototypes that should not be visible outside the lib.

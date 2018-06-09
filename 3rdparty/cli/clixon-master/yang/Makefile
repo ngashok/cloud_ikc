@@ -38,12 +38,11 @@ bindir 		= ${exec_prefix}/bin
 includedir	= ${prefix}/include
 datarootdir     = ${prefix}/share
 
-YANGSPECS	 = clixon-config@2018-02-12.yang
+YANGSPECS	 = clixon-config@2018-04-30.yang
 YANGSPECS	+= ietf-netconf@2011-06-01.yang
 YANGSPECS	+= ietf-netconf-acm@2018-02-14.yang
 YANGSPECS	+= ietf-inet-types@2013-07-15.yang
 YANGSPECS	+= ietf-yang-types@2013-07-15.yang
-YANGSPECS	+= ietf-testing@2014-05-08.yang
 
 APPNAME	        = clixon  # subdir ehere these files are installed
 

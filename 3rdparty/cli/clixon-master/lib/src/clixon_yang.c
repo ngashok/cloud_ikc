@@ -1638,13 +1638,10 @@ yang_parse_find_match(clicon_handle h,
 				  cbuf_get(regex),
 				  S_IFREG)) < 0)
 	goto done;
-
     /* Entries are sorted, last entry should be most recent date */
     if (ndp != 0){
 	cprintf(fbuf, "%s/%s", yang_dir, dp[ndp-1].d_name);
 	retval = 1;
-
-        printf("\nmodule %s:, file: %s",module,dp[ndp-1].d_name);
     }
     else
 	retval = 0;
@@ -1688,7 +1685,6 @@ yang_parse_recurse(clicon_handle h,
     cbuf       *fbuf = NULL;
     int         nr;
 
-   // printf("\nyang_dir %s",yang_dir);
     if (module[0] == '/'){
 	if ((ymod = yang_parse_file(h, module, ysp)) == NULL)
 	    goto done;

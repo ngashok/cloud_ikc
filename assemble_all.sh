@@ -20,5 +20,5 @@ make
 make install
 
 cd $PROJECT_SOURCE/3rdparty/google_perftool/gperftools-master/
-make
-make install
+#make
+#make install

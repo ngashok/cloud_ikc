@@ -61,39 +61,19 @@ mycallback(clicon_handle h, cvec *cvv, cvec *argv)
     cxobj     *xret = NULL;
     cg_var    *myvar;
 
-    FILE *fp;
-    char path[1035];
-
     /* Access cligen callback variables */
     myvar = cvec_find(cvv, "var"); /* get a cligen variable from vector */
     cli_output(stderr, "%s: %d\n", __FUNCTION__, cv_int32_get(myvar)); /* get int value */
     cli_output(stderr, "arg = %s\n", cv_string_get(cvec_i(argv,0))); /* get string value */
 
-    /* Open the command for reading. */
-    fp = popen("/home/ngashok/Projects/ikc_cloud/DPDK/dpdk-stable-17.11.2/usertools/dpdk-devbind.py --status", "r");
-    if (fp == NULL) {
-	printf("Failed to run command\n" );
-	exit(1);
-    }
-
-    /* Read the output a line at a time - output it. */
-    while (fgets(path, sizeof(path)-1, fp) != NULL) {
-	cli_output(stderr,"%s", path);
-	//printf("%s\n", path);
-    }
-
-    /* close */
-    pclose(fp);
-
-
     /* Show eth0 interfaces config using XPATH */
     if (clicon_rpc_get_config(h, "running","/interfaces/interface[name=eth0]",
-		&xret) < 0)
+			      &xret) < 0)
 	goto done;
 
     xml_print(stdout, xret);
     retval = 0;
-done:
+ done:
     if (xret)
 	xml_free(xret);
     return retval;

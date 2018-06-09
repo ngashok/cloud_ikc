@@ -41,7 +41,7 @@ PATH: /usr/local/games
 ## Core tests. ##
 ## ----------- ##
 
-configure:2194: result: CLIXON version is "3.6.0"
+configure:2194: result: CLIXON version is "3.6.1"
 configure:2230: checking build system type
 configure:2244: result: x86_64-unknown-linux-gnu
 configure:2264: checking host system type
@@ -125,10 +125,10 @@ configure: failed program was:
 | #define PACKAGE_STRING ""
 | #define PACKAGE_BUGREPORT ""
 | #define PACKAGE_URL ""
-| #define CLIXON_VERSION_STRING "3.6.0"
+| #define CLIXON_VERSION_STRING "3.6.1"
 | #define CLIXON_VERSION_MAJOR 3
 | #define CLIXON_VERSION_MINOR 6
-| #define CLIXON_VERSION_PATCH 0
+| #define CLIXON_VERSION_PATCH 1
 | /* end confdefs.h.  */
 | #include <ac_nonexistent.h>
 configure:3215: result: gcc -E
@@ -146,10 +146,10 @@ configure: failed program was:
 | #define PACKAGE_STRING ""
 | #define PACKAGE_BUGREPORT ""
 | #define PACKAGE_URL ""
-| #define CLIXON_VERSION_STRING "3.6.0"
+| #define CLIXON_VERSION_STRING "3.6.1"
 | #define CLIXON_VERSION_MAJOR 3
 | #define CLIXON_VERSION_MINOR 6
-| #define CLIXON_VERSION_PATCH 0
+| #define CLIXON_VERSION_PATCH 1
 | /* end confdefs.h.  */
 | #include <ac_nonexistent.h>
 configure:3280: result: compiler is gcc
@@ -168,10 +168,10 @@ configure:3409: checking lex output file root
 configure:3423: result: lex.yy
 configure:3428: checking lex library
 configure:3442: gcc -o conftest -O2 -Wall -DHAVE_CONFIG_H   conftest.c   >&5
-/tmp/ccL6Rcza.o: In function `yylex':
+/tmp/ccDtw3lz.o: In function `yylex':
 conftest.c:(.text+0xa4b): undefined reference to `yywrap'
 conftest.c:(.text+0xf50): undefined reference to `yywrap'
-/tmp/ccL6Rcza.o: In function `main':
+/tmp/ccDtw3lz.o: In function `main':
 conftest.c:(.text.startup+0x9): undefined reference to `yywrap'
 collect2: error: ld returned 1 exit status
 configure:3442: $? = 1
@@ -183,10 +183,10 @@ configure: failed program was:
 | #define PACKAGE_STRING ""
 | #define PACKAGE_BUGREPORT ""
 | #define PACKAGE_URL ""
-| #define CLIXON_VERSION_STRING "3.6.0"
+| #define CLIXON_VERSION_STRING "3.6.1"
 | #define CLIXON_VERSION_MAJOR 3
 | #define CLIXON_VERSION_MINOR 6
-| #define CLIXON_VERSION_PATCH 0
+| #define CLIXON_VERSION_PATCH 1
 | /* end confdefs.h.  */
 | 
 | #line 3 "lex.yy.c"
@@ -2093,10 +2093,10 @@ configure: failed program was:
 | #define PACKAGE_STRING ""
 | #define PACKAGE_BUGREPORT ""
 | #define PACKAGE_URL ""
-| #define CLIXON_VERSION_STRING "3.6.0"
+| #define CLIXON_VERSION_STRING "3.6.1"
 | #define CLIXON_VERSION_MAJOR 3
 | #define CLIXON_VERSION_MINOR 6
-| #define CLIXON_VERSION_PATCH 0
+| #define CLIXON_VERSION_PATCH 1
 | #define YYTEXT_POINTER 1
 | #define HAVE_LIBM 1
 | #define STDC_HEADERS 1
@@ -2143,10 +2143,10 @@ configure: failed program was:
 | #define PACKAGE_STRING ""
 | #define PACKAGE_BUGREPORT ""
 | #define PACKAGE_URL ""
-| #define CLIXON_VERSION_STRING "3.6.0"
+| #define CLIXON_VERSION_STRING "3.6.1"
 | #define CLIXON_VERSION_MAJOR 3
 | #define CLIXON_VERSION_MINOR 6
-| #define CLIXON_VERSION_PATCH 0
+| #define CLIXON_VERSION_PATCH 1
 | #define YYTEXT_POINTER 1
 | #define HAVE_LIBM 1
 | #define STDC_HEADERS 1
@@ -2200,7 +2200,7 @@ configure:4183: $? = 0
 configure:4183: result: yes
 configure:4183: checking for sigvec
 configure:4183: gcc -o conftest -O2 -Wall -DHAVE_CONFIG_H   conftest.c -ldl -lnsl -lcrypt -lfcgi -lcligen -lm  >&5
-/tmp/ccCNN6bR.o: In function `main':
+/tmp/ccmzbVkk.o: In function `main':
 conftest.c:(.text.startup+0x7): undefined reference to `sigvec'
 collect2: error: ld returned 1 exit status
 configure:4183: $? = 1
@@ -2212,10 +2212,10 @@ configure: failed program was:
 | #define PACKAGE_STRING ""
 | #define PACKAGE_BUGREPORT ""
 | #define PACKAGE_URL ""
-| #define CLIXON_VERSION_STRING "3.6.0"
+| #define CLIXON_VERSION_STRING "3.6.1"
 | #define CLIXON_VERSION_MAJOR 3
 | #define CLIXON_VERSION_MINOR 6
-| #define CLIXON_VERSION_PATCH 0
+| #define CLIXON_VERSION_PATCH 1
 | #define YYTEXT_POINTER 1
 | #define HAVE_LIBM 1
 | #define STDC_HEADERS 1
@@ -2280,7 +2280,7 @@ configure: failed program was:
 configure:4183: result: no
 configure:4183: checking for strlcpy
 configure:4183: gcc -o conftest -O2 -Wall -DHAVE_CONFIG_H   conftest.c -ldl -lnsl -lcrypt -lfcgi -lcligen -lm  >&5
-/tmp/ccAa0jcX.o: In function `main':
+/tmp/ccOkxRFl.o: In function `main':
 conftest.c:(.text.startup+0x7): undefined reference to `strlcpy'
 collect2: error: ld returned 1 exit status
 configure:4183: $? = 1
@@ -2292,10 +2292,10 @@ configure: failed program was:
 | #define PACKAGE_STRING ""
 | #define PACKAGE_BUGREPORT ""
 | #define PACKAGE_URL ""
-| #define CLIXON_VERSION_STRING "3.6.0"
+| #define CLIXON_VERSION_STRING "3.6.1"
 | #define CLIXON_VERSION_MAJOR 3
 | #define CLIXON_VERSION_MINOR 6
-| #define CLIXON_VERSION_PATCH 0
+| #define CLIXON_VERSION_PATCH 1
 | #define YYTEXT_POINTER 1
 | #define HAVE_LIBM 1
 | #define STDC_HEADERS 1
@@ -2512,7 +2512,7 @@ CC='gcc'
 CFLAGS='-O2 -Wall'
 CLIGEN_PREFIX='/usr/local'
 CLIGEN_VERSION='3'
-CLIXON_VERSION='"3.6.0"'
+CLIXON_VERSION='"3.6.1"'
 CLIXON_VERSION_MAJOR='3'
 CLIXON_VERSION_MINOR='6'
 CLIXON_VERSION_STRING=''
@@ -2601,10 +2601,10 @@ with_restconf='yes'
 #define PACKAGE_STRING ""
 #define PACKAGE_BUGREPORT ""
 #define PACKAGE_URL ""
-#define CLIXON_VERSION_STRING "3.6.0"
+#define CLIXON_VERSION_STRING "3.6.1"
 #define CLIXON_VERSION_MAJOR 3
 #define CLIXON_VERSION_MINOR 6
-#define CLIXON_VERSION_PATCH 0
+#define CLIXON_VERSION_PATCH 1
 #define YYTEXT_POINTER 1
 #define HAVE_LIBM 1
 #define STDC_HEADERS 1

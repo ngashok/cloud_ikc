@@ -4,7 +4,6 @@ CLICON_PROMPT="%U@%H> ";
 CLICON_PLUGIN="example_cli";
 
 # Note, when switching to PT, change datamodel to only @datamodel
-
 set @datamodel:example, cli_set();
 merge @datamodel:example, cli_merge();
 create @datamodel:example, cli_create();
@@ -50,14 +49,9 @@ load("Load configuration from XML file") <filename:string>("Filename (local file
     replace("Replace candidate with file contents"), load_config_file("filename", "replace");
     merge("Merge file with existent candidate"), load_config_file("filename", "merge");
 }
-
-test("This is a comment") <var:int32>("Just a random number"), mycallback("myarg");
+example("This is a comment") <var:int32>("Just a random number"), mycallback("myarg");
 rpc("fib-route rpc") <instance:string>("routing instance"), fib_route_rpc("myarg");
 notify("Get notifications from backend"), cli_notify("ROUTING", "1", "text");
 no("Negate") notify("Get notifications from backend"), cli_notify("ROUTING", "0", "xml");
 lock,cli_lock("candidate");
 unlock,cli_unlock("candidate");
-
-
-
-

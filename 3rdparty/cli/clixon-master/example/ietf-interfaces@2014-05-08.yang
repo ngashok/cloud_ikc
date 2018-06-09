@@ -109,9 +109,9 @@
       * Configuration data nodes
       */
 
-     container interface {
+     container interfaces {
        description
-         "Interface configuration parameters. ASHOK TESTING ASHOK";
+         "Interface configuration parameters.";
 
        list interface {
          key "name";

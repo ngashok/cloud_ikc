@@ -64,14 +64,11 @@ YANGSPECS	 = $(APPNAME).yang
 YANGSPECS	+= ietf-yang-types@2013-07-15.yang
 YANGSPECS	+= ietf-inet-types@2013-07-15.yang
 YANGSPECS	+= ietf-interfaces@2014-05-08.yang
-YANGSPECS	+= ietf-testing@2014-05-08.yang
 YANGSPECS	+= ietf-ip@2014-06-16.yang
 YANGSPECS	+= ietf-routing@2014-10-26.yang
 YANGSPECS	+= ietf-ipv4-unicast-routing@2014-10-26.yang
 YANGSPECS	+= ietf-ipv6-unicast-routing@2014-10-26.yang
 YANGSPECS	+= ietf-ipsec@2016-03-09.yang
-YANGSPECS	+= ietf-arp@2015-05-2018.yang
-
 
 # Backend plugin
 BE_SRC   = $(APPNAME)_backend.c

@@ -1,3 +1,16 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
 # ***** BEGIN LICENSE BLOCK *****
 # Copyright (C) 2009-2018 Olof Hagsand and Benny Holmgren
 # This file is part of CLIXON

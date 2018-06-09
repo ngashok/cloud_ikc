@@ -143,14 +143,8 @@ clicon_file_dirent(const char     *dir,
        /* Filename matching */
        if (regexp) {
 	   if (regexec(&re, dent.d_name, (size_t) 0, NULL, 0) != 0)
-           {
-               //printf("\nDint Match Reg Ex= %s", dent.d_name);
-               continue;
-           }
+	       continue;
        }
-
-       printf("\nMatched Reg Ex= %s", dent.d_name);
-
        /* File type matching */
        if (type) {
 	   snprintf(filename, MAXPATHLEN-1, "%s/%s", dir, dent.d_name);

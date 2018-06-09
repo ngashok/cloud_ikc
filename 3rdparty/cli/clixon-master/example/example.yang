@@ -6,16 +6,8 @@ module example {
     import ietf-routing {
 	prefix rt;
     }
-    import ietf-netconf-acm {
-	prefix nacm;
-    }
-
     import ietf-dpdk {
-	prefix dp;
-    }
-
-    import ietf-arp {
-        prefix ar;
+	prefix rt;
     }
 
     description

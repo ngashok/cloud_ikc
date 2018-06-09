@@ -14,10 +14,10 @@
 #define CLIXON_VERSION_MINOR 6
 
 /* Clixon path version */
-#define CLIXON_VERSION_PATCH 0
+#define CLIXON_VERSION_PATCH 1
 
 /* Clixon version string */
-#define CLIXON_VERSION_STRING "3.6.0"
+#define CLIXON_VERSION_STRING "3.6.1"
 
 /* Define to 1 if you have the `alphasort' function. */
 #define HAVE_ALPHASORT 1
