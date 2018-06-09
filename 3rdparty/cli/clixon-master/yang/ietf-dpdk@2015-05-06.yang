@@ -1,0 +1,17 @@
+module ietf-dpdk {
+    namespace "urn:ietf:params:xml:ns:yang:ietf-dpdk";
+
+    prefix "dp";
+
+    import ietf-yang-types {
+        prefix "yang";
+        revision-date "2013-07-15";
+    }
+
+    leaf dpdk {
+        type string;
+        description
+            "Interface to be bound to dpdk";
+    }
+}
+

@@ -13,7 +13,7 @@ my $leaf_name;
 my $leaf_type;
 my $temp;
 
-my $SRC_DIR = "/home/ngashok/Projects/my_ikc_cloud/scripts/";
+my $SRC_DIR = "/home/ngashok/Projects/cloud_ikc/";
 my $DST_DIR = "$SRC_DIR/gen_proto";
 #leaf node associate array
 my %leaf_node_hash;
