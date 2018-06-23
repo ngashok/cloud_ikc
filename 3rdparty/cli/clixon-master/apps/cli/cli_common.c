@@ -224,6 +224,13 @@ cli_dbxml(clicon_handle       h,
 	clicon_err(OE_PLUGIN, 0, "%s: Requires one element to be xml key format string", __FUNCTION__);
 	goto done;
     }
+    /* Print cvv[0] */
+#if 0
+    if (cvv->vr_vec) {
+        //printf("\n%svar_name\n",(struct cvec *)cvv->vr_vec->var_name);
+    }
+#endif
+    
     if ((yspec = clicon_dbspec_yang(h)) == NULL){
 	clicon_err(OE_FATAL, 0, "No DB_SPEC");
 	goto done;
@@ -245,12 +252,28 @@ cli_dbxml(clicon_handle       h,
 	goto done;
     if (y->yn_keyword != Y_LIST && y->yn_keyword != Y_LEAF_LIST){
 	len = cvec_len(cvv);
+        cg_var    *my_cval;
+        char *my_str;
+        int index = 0;
+        /* Print all keywords values */
+        for (index = 0; index < len ; index++ ) {
+            my_cval = cvec_i(cvv,index);
+            if ((my_str = cv2str_dup(my_cval)) == NULL){
+                clicon_err(OE_UNIX, errno, "cv2str_dup");
+                continue;
+            }
+
+            printf("\nstring = %s\n",my_str);
+        }
+
+
 	if (len > 1){
 	    cval = cvec_i(cvv, len-1); 
 	    if ((str = cv2str_dup(cval)) == NULL){
 		clicon_err(OE_UNIX, errno, "cv2str_dup");
 		goto done;
 	    }
+            //printf("\n str = %s \n",str);
 	    if ((xb = xml_new("body", xbot, NULL)) == NULL)
 		goto done; 
 	    xml_type_set(xb, CX_BODY);

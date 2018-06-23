@@ -248,7 +248,6 @@ main(int argc, char **argv)
     
     /* Defaults */
     once = 0;
-
     /* In the startup, logs to stderr & debug flag set later */
     clicon_log_init(__PROGRAM__, LOG_INFO, logdst); 
     /* Initiate CLICON handle */
@@ -470,7 +469,10 @@ main(int argc, char **argv)
     *(argv-1) = argv0;
     clixon_plugin_start(h, argc+1, argv-1);
     *(argv-1) = tmp;
-
+    system("echo \"\e[1;31m\"");
+    system("banner ikc cloud");
+    system("echo \"\e[0m\"");
+    sleep(1);
     cligen_line_scrolling_set(cli_cligen(h), clicon_option_int(h,"CLICON_CLI_LINESCROLLING"));
     /* Launch interfactive event loop, unless -1 */
     if (restarg != NULL && strlen(restarg)){

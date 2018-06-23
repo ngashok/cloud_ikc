@@ -43,7 +43,7 @@
  * Defined internally in cligen_cvec.c
  */
 typedef struct cvec cvec;
-
+//extern struct cvec;
 
 /*
  * Prototypes
