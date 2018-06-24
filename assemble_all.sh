@@ -44,8 +44,8 @@ cd $PROJECT_SOURCE/ipc
 #cd $PROJECT_SOURCE/3rdparty/enet-1.3.13/ASHOK
 
 cd $PROJECT_SOURCE/ipc
-g++ -std=gnu++11 -o client -I$PROJECT_SOURCE/generated_files ipc_client.cpp $PROJECT_SOURCE/generated_files/message.pb.cc $PROJECT_SOURCE/generated_files/ietf-dpdk@2015-05-06.pb.cc -lrt -lprotobuf -lpthread -lenet
+g++ -std=gnu++11 -o client -I$PROJECT_SOURCE/generated_files Process.cpp ipc_client.cpp $PROJECT_SOURCE/generated_files/message.pb.cc $PROJECT_SOURCE/generated_files/ietf-dpdk@2015-05-06.pb.cc -lrt -lprotobuf -lpthread -lenet
 
-g++ -std=gnu++11 -o server -I$PROJECT_SOURCE/generated_files ipc_server.cpp $PROJECT_SOURCE/generated_files/message.pb.cc $PROJECT_SOURCE/generated_files/ietf-dpdk@2015-05-06.pb.cc -lrt -lprotobuf -lpthread -lenet
+g++ -std=gnu++11 -o server -I$PROJECT_SOURCE/generated_files Process.cpp main.cpp $PROJECT_SOURCE/generated_files/message.pb.cc $PROJECT_SOURCE/generated_files/ietf-dpdk@2015-05-06.pb.cc -lrt -lprotobuf -lpthread -lenet
 #make
 #make install
