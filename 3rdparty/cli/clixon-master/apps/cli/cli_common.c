@@ -252,7 +252,7 @@ cli_dbxml(clicon_handle       h,
 	goto done;
     if (y->yn_keyword != Y_LIST && y->yn_keyword != Y_LEAF_LIST){
 	len = cvec_len(cvv);
-        cg_var    *my_cval;
+#if 0
         char *my_str;
         int index = 0;
         /* Print all keywords values */
@@ -263,8 +263,9 @@ cli_dbxml(clicon_handle       h,
                 continue;
             }
 
-            printf("\nstring = %s\n",my_str);
+            printf("\nASHOK: string = %s\n",my_str);
         }
+#endif
 
 
 	if (len > 1){
@@ -273,12 +274,13 @@ cli_dbxml(clicon_handle       h,
 		clicon_err(OE_UNIX, errno, "cv2str_dup");
 		goto done;
 	    }
-            //printf("\n str = %s \n",str);
 	    if ((xb = xml_new("body", xbot, NULL)) == NULL)
 		goto done; 
 	    xml_type_set(xb, CX_BODY);
 	    if (xml_value_set(xb,  str) < 0)
 		goto done;
+
+            printf("\n str = %s \n",str);
 	}
     }
     if ((cb = cbuf_new()) == NULL){
@@ -290,8 +292,25 @@ cli_dbxml(clicon_handle       h,
     if (clicon_rpc_edit_config(h, "candidate", OP_NONE, cbuf_get(cb)) < 0)
 	goto done;
     if (clicon_autocommit(h)) {
+	if (y->yn_keyword != Y_LIST && y->yn_keyword != Y_LEAF_LIST){
+	    char *my_str;
+	    int index = 0;
+	    cg_var    *my_cval;
+	    /* Print all keywords values */
+	    for (index = 0; index < len ; index++ ) {
+		my_cval = cvec_i(cvv,index);
+		if ((my_str = cv2str_dup(my_cval)) == NULL){
+		    clicon_err(OE_UNIX, errno, "cv2str_dup");
+		    continue;
+		}
+
+		printf("\nASHOK: string = %s\n",my_str);
+	    }
+	}
+
 	if (clicon_rpc_commit(h) < 0) 
 	    goto done;
+
     }
     retval = 0;
  done:
@@ -563,8 +582,26 @@ cli_commit(clicon_handle h,
     
     if ((retval = clicon_rpc_commit(h)) < 0)
 	goto done;
+    //   if (y->yn_keyword != Y_LIST && y->yn_keyword != Y_LEAF_LIST){
+            char *my_str;
+            int index = 0;
+            int len = cvec_len(vars);
+            cg_var    *my_cval;
+            /* Print all keywords values */
+            for (index = 0; index < len ; index++ ) {
+                my_cval = cvec_i(vars,index);
+                if ((my_str = cv2str_dup(my_cval)) == NULL){
+                    clicon_err(OE_UNIX, errno, "cv2str_dup");
+                    continue;
+                }
+
+                printf("\nASHOK: string = %s\n",my_str);
+            }
+     //   }
+
     retval = 0;
   done:
+
     return retval;
 }
 int cli_commitv(clicon_handle h, cvec *vars, cvec *argv)
