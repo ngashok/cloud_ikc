@@ -1,0 +1,22 @@
+ syntax = "proto3"; 
+import "google/protobuf/any.proto";
+message ErrorStatus {
+      string message = 1;
+      google.protobuf.Any details = 2;
+}
+
+message log_packet {
+    fixed64 log_time =1;
+    fixed32 log_micro_sec =2;
+    fixed32 sequence_no =3;
+    fixed32 shm_app_id =4;
+    string packet_id =5;
+    string log_level=6;
+    string log_msg=7;
+
+    message interface {
+        string interface = 8;
+    }
+   
+    repeated interface if = 9;
+}
